@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+ box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  font-size: 14px;
+}
+.header {
+  &__top-block {
+    background-color: #FAFBFC;
+    height: 32px;
+    padding: 8px 0;
+    color: #708598;
+    line-height: 1;
+    font-size: 12px;
+  }
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    &-item {
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      &+& {
+       margin-left: 24px;
+      }
+    }
+  }
+  &__main-block {
+   padding: 11px 0;
+   border-bottom: 1px solid #ECEFF1;
+   border-top: 1px solid #ECEFF1;
+  }
+  &__right-block {
+   flex-grow: 1;
+  }
+  &__logo {
+   margin-right: 24px;
+  }
+  &__search-box{
+   margin-right: 24px;
+   flex-grow: 1;
+   padding-left: 24px;
+   .default-input {
+    font-size: 14px;
+   }
+  }
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+.block {
+   &_flex {
+    display: flex;
+  }
+  &_spcbtwn {
+    justify-content: space-between;
+  }
+  &_right{
+   justify-content: flex-end;
+  }
+  &_vert-center {
+   align-items: center;
+  }
+}
+.button {
+  border: none;
+  font-weight: 600;
+  outline: none;
+  padding: 0 18px;
+  height: 40px;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+ &_burger {
+  background-color: #FED83D;
+  padding-left: 46px;
+  font-weight: 600;
+ }
+ &_list{
+  padding-left: 42px;
+ }
+}
+.list{
+ &__icon{
+  position: absolute;
+  left: 0;
+  left: 14px;
+  top: 50%;
+  margin-top: -12.5px;
+ }
+ &-enabled{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+ }
+}
+.burger-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  display: inline-block;
+  width: 15px;
+  span {
+   background: black;
+   display: block;
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   opacity: 1;
+   left: 0;
+   transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+   transition: 0.25s cubic-bezier(0.43, 0.58, 0.47, 0.62);
+   -moz-transition: 0.25s cubic-bezier(0.43, 0.58, 0.47, 0.62);
+   -o-transition: 0.25s cubic-bezier(0.43, 0.58, 0.47, 0.62);
+   -webkit-transition: 0.25s cubic-bezier(0.43, 0.58, 0.47, 0.62);
+   top: 15px;
+   border-radius: 1px;
+   &:nth-child(2) {
+    top: 20px;
+   }
+   &:nth-child(3) {
+    top: 25px;
+   }
+  }
+  &.open {
+    span {
+     &:nth-child(1) {
+      transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      top: 20px;
+     }
+     &:nth-child(2) {
+      opacity: 0;
+     }
+     &:nth-child(3) {
+      opacity: 1;
+      transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      top: 20px;
+     }
+   }
+  }
+}
+.profile {
+ background-color: #9B51E0;
+ border-radius: 50%;
+ height: 40px;
+ width: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ color: #fff;
+ margin-left: 24px;
+ line-height: 1;
+}
+.icon {
+ &-map{
+  margin-right: 8px;
+  height: 16px;
+ }
+ &-down{
+  display: inline-block;
+  margin-left: 7px;
+ }
+ &-close{
+  position: absolute;
+  right: 0;
+  top: 0px;
+  svg{
+   fill: #fff;
+   height: 24px;
+   width: 24px;
+  }
+ }
+ &-search{
+    display: block;
+    position: absolute;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    background-size: cover;
+    background-position: 50% 50%;
+ }
+}
+
+.content{
+ padding-top: 40px;
+}
+.catalog-list{
+ position: absolute;
+ left: 0;
+ right: 0;
+ background-color: #000;
+ z-index: 1;
+ color: #fff;
+ padding: 20px 0;
+ transition: 0.5s all;
+ top: -100%;
+ &__ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ }
+ &__item{
+  padding: 5px 0;
+ }
+ &_active{
+  top: 0px;
+ }
+}
+ .relative{
+  position: relative;
+ }
