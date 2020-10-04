@@ -4,7 +4,7 @@
       <div class="catalog-list" :class="{'catalog-list_active': burgerActive}">
         <div class="container relative">
           <i class="icon-close" @click="toggleMenu">
-          <close-icon></close-icon>
+            <close-icon></close-icon>
           </i>
           <ul class="catalog-list__ul">
             <li class="catalog-list__item">Первый пункт</li>
