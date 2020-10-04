@@ -29,7 +29,7 @@
             <li class="header__menu-item"><router-link to="/contractors">База подрядчиков</router-link></li>
             <li class="header__menu-item"><router-link to="/services">Другие сервисы
               <i class="icon-down">
-              <arrow-down-icon></arrow-down-icon>
+                <arrow-down-icon></arrow-down-icon>
               </i>
             </router-link></li>
           </ul>
